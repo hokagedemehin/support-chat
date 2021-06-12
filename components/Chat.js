@@ -20,7 +20,7 @@ const Chat = (props) => {
     // console.log(recipientEmail)
     return (
         <Container onClick={enterChat}>
-            {recipient?.photoURL.length > 1 ? (<UserAvatar src={recipient?.photoURL} />) : (<UserAvatar>{recipientEmail?.charAt(0).toUpperCase()}</UserAvatar>) }
+            {recipient?.photoURL.length > 1 && recipient?.email === recipientEmail ? (<UserAvatar src={recipient?.photoURL} />) : (<UserAvatar>{recipientEmail?.charAt(0).toUpperCase()}</UserAvatar>) }
             
             <p>{recipientEmail}</p>
         </Container>

@@ -23,8 +23,9 @@ const Login = () => {
 
     const uiConfig = {
         signinOptions: [
-            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
             firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            firebase.auth.GithubAuthProvider.PROVIDER_ID,
         ],
         signInFLow: 'popup',
         signinSuccessUrl: '/',
@@ -35,11 +36,15 @@ const Login = () => {
         <Container>
             <Head>
                 <title>Login Page</title>
+                <link rel="icon" href="/whatsapp.png" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Signika:wght@600;700&display=swap" rel="stylesheet"></link>
             </Head>
             <LoginContainer>
                 {/* <Logo /> */}
-                <Button>Sign in</Button>
+                {/* <Button>Sign in</Button> */}
                 {/* ui.start('#firebaseui-auth-container', uiConfig); */}
+                <PageTopic>Ibk Support Chat</PageTopic>
                 <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
             </LoginContainer>
         </Container>
@@ -51,3 +56,10 @@ export default Login
 const Container = styled.div``;
 const LoginContainer = styled.div``;
 const Logo = styled.image``;
+const PageTopic = styled.h2`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Signika', sans-serif;
+    font-size: 3rem;
+`;

@@ -16,6 +16,7 @@ const Chat = (props) => {
             <Head>
                 <title>Chat with {getRecipientEmail(chat.users, user)}</title>
                 <meta name="description" content="Each Chat will be generated here" />
+                <link rel="icon" href="/whatsapp.png" />
             </Head>
             <Sidebar/>
             <ChatContainer>
