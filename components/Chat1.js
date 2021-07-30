@@ -6,7 +6,7 @@ import {auth, db} from '../firebase'
 import { useCollection } from 'react-firebase-hooks/firestore';
 import { useRouter} from 'next/router'
 
-const Chat = (props) => {
+const Chat1 = (props) => {
     const router = useRouter()
     const {users, id} = props
     const [value] = useCollection(db.collection('users').where('email', '==', getRecipientEmail(users, user)))
@@ -27,7 +27,7 @@ const Chat = (props) => {
     )
 }
 
-export default Chat
+export default Chat1
 
 
 const Container = styled.div`

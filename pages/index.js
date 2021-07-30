@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Sidebar from '../components/Sidebar'
+// import Sidebar1 from '../components/Sidebar1'
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
 
@@ -13,6 +14,7 @@ export default function Home() {
         <link rel="icon" href="/whatsapp.png" />
       </Head>
       <Sidebar />
+      {/* <Sidebar1 /> */}
     </div>
   )
 }
